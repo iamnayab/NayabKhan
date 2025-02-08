@@ -1,0 +1,58 @@
+/* General Styling */
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Text Section */
+.welcome-message {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.name {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Image Styling */
+.intro-image img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.intro-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Button Styling */
+.btn-primary {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
