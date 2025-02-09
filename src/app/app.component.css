@@ -1,0 +1,117 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #313131;
+    color: white;
+    padding: 5px 20px;
+  }
+  
+  /* Logo Styling */
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Desktop Navigation */
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-links a:hover {
+    color: #fbbf24;
+  }
+  
+  /* Hamburger Button */
+  .toggle-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+  }
+  
+  /* Side Panel Navigation */
+  .side-panel {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    background: #1a202c;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    transition: right 0.3s ease-in-out;
+  }
+  
+  /* When open */
+  .side-panel.open {
+    right: 0;
+  }
+  
+  .nav-links-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .nav-links-column a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-links-column a:hover {
+    color: #fbbf24;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none; /* Hide desktop navigation */
+    }
+    
+    .toggle-button {
+      display: block; /* Show hamburger */
+    }
+  }
+  
+
+  /* Logo Container */
+.nk-logo {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    display: inline-block;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+  }
+
+  .n{
+    transform: skew(-20deg);
+  }
+  .k{
+    transform: skew(-20deg);
+  }
+  

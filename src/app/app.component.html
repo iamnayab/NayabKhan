@@ -1,2 +1,26 @@
-<!-- <app-home></app-home> -->
+  <header class="header">
+    <!-- <div class="logo">My Portfolio</div> -->
+    <div class="nk-logo">
+        <span class="n">N</span><span class="k">K</span>
+      </div>
+      
+    <nav class="nav-links">
+      <a routerLink="/home">Home</a>
+      <a routerLink="/portfolio">Portfolio</a>
+      <a routerLink="/blog">Blog</a>
+      <a routerLink="/address">Address</a>
+      <a routerLink="/more">More</a>
+    </nav>
+    <button class="toggle-button" (click)="toggleMenu()">☰</button>
+  </header>
+  <div class="side-panel" [class.open]="isResponsive">
+    <nav class="nav-links-column">
+      <a routerLink="/home" (click)="toggleMenu()">Home</a>
+      <a routerLink="/portfolio" (click)="toggleMenu()">Portfolio</a>
+      <a routerLink="/blog" (click)="toggleMenu()">Blog</a>
+      <a routerLink="/address" (click)="toggleMenu()">Address</a>
+      <a routerLink="/more" (click)="toggleMenu()">More</a>
+    </nav>
+  </div>
+  
 <router-outlet></router-outlet>

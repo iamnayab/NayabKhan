@@ -1,21 +1,39 @@
-<header class="header">
-    <div class="logo">My Portfolio</div>
-    <nav class="nav-links">
-      <a routerLink="/">Home</a>
-      <a routerLink="/portfolio">Portfolio</a>
-      <a routerLink="/blog">Blog</a>
-      <a routerLink="/address">Address</a>
-      <a routerLink="/more">More</a>
-    </nav>
-    <button class="toggle-button" (click)="toggleMenu()">☰</button>
-  </header>
-  <div class="side-panel" [class.open]="isResponsive" (click)="toggleMenu()">
-    <nav class="nav-links-column">
-      <a routerLink="/">Home</a>
-      <a routerLink="/portfolio">Portfolio</a>
-      <a routerLink="/blog">Blog</a>
-      <a routerLink="/address">Address</a>
-      <a routerLink="/more">More</a>
-    </nav>
-  </div>
-  <router-outlet></router-outlet>
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to My World</h1>
+        <p id="animated-text">Full Stack Developer | Gamer | Photographer | Videographer</p>
+        <a href="/portfolio" class="btn">Explore My Work</a>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services">
+    <h2>What I Do</h2>
+    <div class="service-items">
+        <div class="service-item">💻 Full Stack Development</div>
+        <div class="service-item">🎮 Gamer</div>
+        <div class="service-item">📸 Photography</div>
+        <div class="service-item">🎥 Videography</div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+    <h2>What People Say</h2>
+    <div class="testimonial-items">
+        <div class="testimonial-item">"Nayab's work is top-notch!" – Nastaeen</div>
+        <div class="testimonial-item">"Highly skilled and creative!" – Salman</div>
+    </div>
+</section>
+
+<!-- Fun Facts Section -->
+<section class="fun-facts">
+    <h2>Some Fun Facts</h2>
+    <div class="facts">
+        <div class="fact">🚀 5+ Projects Completed</div>
+        <div class="fact">🎮 BGMI Achievements: Top Rankings & Wins</div>
+        <div class="fact">🏆 Multiple MVP Awards in Gaming</div>
+        <div class="fact">📷 500+ Photos Clicked</div>
+        <div class="fact">🎬 30+ Videos Edited</div>
+    </div>
+</section>

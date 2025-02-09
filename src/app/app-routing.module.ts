@@ -8,13 +8,12 @@ import { AppComponent } from './app.component';
 
 
 const routes: Routes=[
-  // {path:'**',component:NotFoundComponent},
-{
-  path:'',component:HomeComponent,
-  children:[{
-    path:'portfolio',component:PortfolioComponent
-  }]
-},
+  {
+    path: '', redirectTo: 'home', pathMatch: 'full',
+  },
+  { path: 'home', component: HomeComponent },
+  { path: 'portfolio', component: PortfolioComponent },
+  {path:'**',component:NotFoundComponent},
 
 ]
 

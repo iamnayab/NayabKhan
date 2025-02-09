@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'personal-portfolio';
+  title = 'Nayab Khan';
+
+  isResponsive = false;
+  
+toggleMenu() {
+  this.isResponsive = !this.isResponsive;
+}
 }
