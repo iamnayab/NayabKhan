@@ -1,12 +1,21 @@
-<div class="home-container">
-    <div class="welcome-message">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Hi, I'm <span class="name">Nayab Khan</span>, a passionate web developer.</p>
-        <p>Feel free to explore my work and learn more about me!</p>
-        <button class="btn btn-primary" (click)="showSnackbar()">View My Projects</button>
-    </div>
-
-    <div class="intro-image">
-        <img src="assets/IMG_08022455.jpeg" alt="Nayab Khan" />
-    </div>
-</div>
+<header class="header">
+    <div class="logo">My Portfolio</div>
+    <nav class="nav-links">
+      <a routerLink="/">Home</a>
+      <a routerLink="/portfolio">Portfolio</a>
+      <a routerLink="/blog">Blog</a>
+      <a routerLink="/address">Address</a>
+      <a routerLink="/more">More</a>
+    </nav>
+    <button class="toggle-button" (click)="toggleMenu()">☰</button>
+  </header>
+  <div class="side-panel" [class.open]="isResponsive" (click)="toggleMenu()">
+    <nav class="nav-links-column">
+      <a routerLink="/">Home</a>
+      <a routerLink="/portfolio">Portfolio</a>
+      <a routerLink="/blog">Blog</a>
+      <a routerLink="/address">Address</a>
+      <a routerLink="/more">More</a>
+    </nav>
+  </div>
+  <router-outlet></router-outlet>
