@@ -72,6 +72,6 @@ justify-content: center;
     }
 }
 
-#animated-text {
+/* #animated-text {
     animation: fadeIn 2s ease-in-out infinite alternate;
-}
+} */
