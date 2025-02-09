@@ -9,7 +9,8 @@
       <a routerLink="/portfolio">Portfolio</a>
       <a routerLink="/blog">Blog</a>
       <a routerLink="/address">Address</a>
-      <a routerLink="/more">More</a>
+      <a *ngIf="!isLoggedIn" routerLink="/login">Login</a>
+<a *ngIf="isLoggedIn" (click)="logout()">Logout</a>
     </nav>
     <button class="toggle-button" (click)="toggleMenu()">☰</button>
   </header>
@@ -19,7 +20,8 @@
       <a routerLink="/portfolio" (click)="toggleMenu()">Portfolio</a>
       <a routerLink="/blog" (click)="toggleMenu()">Blog</a>
       <a routerLink="/address" (click)="toggleMenu()">Address</a>
-      <a routerLink="/more" (click)="toggleMenu()">More</a>
+      <a *ngIf="!isLoggedIn" routerLink="/login" (click)="toggleMenu()">Login</a>
+      <a *ngIf="isLoggedIn" routerLink="/login" (click)="toggleMenu()">Logout</a>
     </nav>
   </div>
   
