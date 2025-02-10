@@ -28,6 +28,7 @@
   
   .nav-links a:hover {
     color: #fbbf24;
+    cursor: pointer;
   }
   
   /* Hamburger Button */

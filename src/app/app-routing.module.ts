@@ -4,7 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AdminComponent } from './admin/admin.component';
-import { AuthGuardService } from './services/auth-guard.service';
+import { AuthGuardService } from './services/auth-guard/auth-guard.service';
 import { LoginComponent } from './login/login.component';
 import { BlogComponent } from './blog/blog.component';
 

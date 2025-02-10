@@ -16,6 +16,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatExpansionModule} from  '@angular/material/expansion'
 
 
 
@@ -39,7 +40,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatInputModule,
     MatButtonModule,
     MatCardModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
