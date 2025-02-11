@@ -1,1 +1,28 @@
-<p>blog works!</p>
+<!-- Blog Posts -->
+<!-- <div *ngFor="let blog of blogs">
+  <h3>{{ blog.title }}</h3>
+  <img [src]="blog.image_url" alt="Blog Image" />
+  <p>{{ blog.content }}</p>
+</div> -->
+
+<div class="container py-5">
+  <h2 class="text-center fw-bold mb-4">Latest Blog Posts</h2>
+
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+    <div *ngFor="let blog of blogs" class="col">
+      <div class="card shadow-sm h-100">
+        <img
+          [src]="blog.image_url || 'https://via.placeholder.com/600x400?text=No+Image'"
+          class="card-img-top fixed-image"
+          alt="Blog Image"
+        />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title fw-bold">{{ blog.title }}</h5>
+          <p class="card-text flex-grow-1 text-muted">{{ blog.content | slice: 0:100 }}...</p>
+          <a href="#" class="btn btn-primary mt-auto">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

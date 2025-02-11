@@ -21,11 +21,11 @@ toggleMenu() {
   this.isResponsive = !this.isResponsive;
 }
 
-
 async ngOnInit() {
-  const { data } = await this.supabase.getUser();
-  this.isLoggedIn = !!data.user;  // ✅ Set login status
+  const userData = await this.supabase.getUser(); // Get user data
+  this.isLoggedIn = !!userData.user;  // ✅ Set login status
 }
+
 
 async logout() {
   await this.supabase.signOut();

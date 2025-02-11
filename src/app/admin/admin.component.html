@@ -1,1 +1,20 @@
-<p>admin works!</p>
+<h2>Manage All your Blog from here</h2>
+
+<div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+
+<!-- Admin Blog Post Form -->
+<div *ngIf="isAdmin">
+  <h3>Create New Blog Post</h3>
+  <input type="text" [(ngModel)]="title" placeholder="Title" />
+  <textarea [(ngModel)]="content" placeholder="Content"></textarea>
+  <input type="file" (change)="onFileSelected($event)" />
+  <button (click)="createBlog()">Post</button>
+</div>
+
+<!-- Blog Posts -->
+<div *ngFor="let blog of blogs">
+  <h3>{{ blog.title }}</h3>
+  <img [src]="blog.image_url" alt="Blog Image" />
+  <p>{{ blog.content }}</p>
+  <button *ngIf="isAdmin" (click)="onDeletePost(blog.id)">Delete</button>
+</div>

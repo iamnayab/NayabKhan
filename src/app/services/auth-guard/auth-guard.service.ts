@@ -7,13 +7,22 @@ import { SupabaseService } from '../supabase/supabase.service';
 })
 export class AuthGuardService implements CanActivate {
   constructor(private supabase: SupabaseService, private router: Router) {}
-
   async canActivate(): Promise<boolean> {
-    const { data } = await this.supabase.getUser();
-    if (!data.user) {
-      this.router.navigate(['/login']); // Redirect to login if not authenticated
+    try {
+      const userData = await this.supabase.getUser(); // Get full response
+      const user = userData.user; // Extract user
+  
+      if (!user) {
+        this.router.navigate(['/login']);
+        return false;
+      }
+  
+      return true;
+    } catch (error) {
+      console.error('Error in AuthGuard:', error);
+      this.router.navigate(['/login']);
       return false;
     }
-    return true;
   }
+  
 }
