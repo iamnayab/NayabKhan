@@ -1,28 +1,29 @@
-<header class="header">
-    <!-- <div class="logo">My Portfolio</div> -->
-    <div class="nk-logo">
-        <span class="n">N</span><span class="k">K</span>
-    </div>
+<mat-toolbar class="toolbar">
+    <mat-toolbar-row>
+        <div class="nk-logo">
+            <span class="n">N</span><span class="k">K</span>
+        </div>
+        <span class="spacer"></span> <!-- Pushes the menu icon to the right -->
+        <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>  <!-- Menu on the Right -->
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>
 
-    <nav class="nav-links">
-        <a routerLink="/home">Home</a>
-        <a routerLink="/portfolio">Portfolio</a>
-        <a routerLink="/blog">Blog</a>
-        <a routerLink="/address">Address</a>
-        <a *ngIf="!isLoggedIn" routerLink="/login">Login</a>
-        <a *ngIf="isLoggedIn" (click)="logout()">Logout</a>
-    </nav>
-    <button class="toggle-button" (click)="toggleMenu()">☰</button>
-</header>
-<div class="side-panel" [class.open]="isResponsive">
-    <nav class="nav-links-column">
-        <a routerLink="/home" (click)="toggleMenu()">Home</a>
-        <a routerLink="/portfolio" (click)="toggleMenu()">Portfolio</a>
-        <a routerLink="/blog" (click)="toggleMenu()">Blog</a>
-        <a routerLink="/address" (click)="toggleMenu()">Address</a>
-        <a *ngIf="!isLoggedIn" routerLink="/login" (click)="toggleMenu()">Login</a>
-        <a *ngIf="isLoggedIn" routerLink="/login" (click)="toggleMenu()">Logout</a>
-    </nav>
-</div>
-
-<router-outlet></router-outlet>
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="side" position="end">
+        <mat-nav-list>
+            <a mat-list-item routerLink="/home" (click)="sidenav.close()">Home</a>
+            <a mat-list-item routerLink="/portfolio" (click)="sidenav.close()">Portfolio</a>
+            <a mat-list-item routerLink="/blog" (click)="sidenav.close()">Blog</a>
+            <a mat-list-item routerLink="/address" (click)="sidenav.close()">Address</a>
+            <a mat-list-item *ngIf="!isLoggedIn" routerLink="/login" (click)="sidenav.close()">Login</a>
+            <a mat-list-item *ngIf="isLoggedIn" (click)="logout(); sidenav.close()">Logout</a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="content-container">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

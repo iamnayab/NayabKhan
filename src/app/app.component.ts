@@ -11,16 +11,12 @@ import { Title } from '@angular/platform-browser';
 export class AppComponent {
   title = 'Nayab Khan';
 
-  isResponsive = false;
   isLoggedIn: boolean = false;
+  
   constructor(private supabase: SupabaseService, private router: Router,private titleService: Title) {
     this.titleService.setTitle('Nayab Khan');
   }
   
-toggleMenu() {
-  this.isResponsive = !this.isResponsive;
-}
-
 async ngOnInit() {
   const userData = await this.supabase.getUser(); // Get user data
   this.isLoggedIn = !!userData.user;  // ✅ Set login status
