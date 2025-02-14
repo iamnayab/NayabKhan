@@ -1,17 +1,17 @@
 <mat-toolbar class="toolbar">
     <mat-toolbar-row>
-        <div class="nk-logo">
-            <span class="n">N</span><span class="k">K</span>
+        <div routerLink="/home">
+            <span class="logo">NK</span>
         </div>
-        <span class="spacer"></span> <!-- Pushes the menu icon to the right -->
+        <span class="spacer"></span>
         <button mat-icon-button (click)="sidenav.toggle()">
-            <mat-icon>menu</mat-icon>  <!-- Menu on the Right -->
+            <mat-icon>menu</mat-icon>
         </button>
     </mat-toolbar-row>
 </mat-toolbar>
 
 <mat-sidenav-container class="sidenav-container">
-    <mat-sidenav #sidenav mode="side" position="end">
+    <mat-sidenav #sidenav  position="end"  [style.width]="sidenav.opened ? '200px' : '150px'">
         <mat-nav-list>
             <a mat-list-item routerLink="/home" (click)="sidenav.close()">Home</a>
             <a mat-list-item routerLink="/portfolio" (click)="sidenav.close()">Portfolio</a>
@@ -24,6 +24,7 @@
     <mat-sidenav-content>
         <div class="content-container">
             <router-outlet></router-outlet>
+            <app-footer></app-footer>
         </div>
     </mat-sidenav-content>
 </mat-sidenav-container>

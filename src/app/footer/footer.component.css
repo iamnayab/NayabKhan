@@ -1,0 +1,38 @@
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-top: auto;
+    background-color: #313131 !important;
+    color: white !important;
+
+}
+
+.footer-content {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+mat-icon {
+    font-size: 24px;
+}
