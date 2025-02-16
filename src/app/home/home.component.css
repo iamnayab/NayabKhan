@@ -1,23 +1,59 @@
-.heading{
-    font-size: 20px;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
 .hero {
-    text-align: center;
-    padding: 50px;
-    background: linear-gradient(45deg, #6912b9, #e905b0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e1e2f, #28293d);
     color: white;
+    padding: 20px;
 }
 
-.hero h1 {
-    font-size: 2rem;
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    gap: 40px;
 }
+
+.text-container {
+    flex: 1;
+}
+
+.heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#animated-text {
+    font-size: 1.2rem;
+    font-style: italic;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
 
 .btn {
     background: white;
@@ -26,21 +62,6 @@ body {
     text-decoration: none;
     border-radius: 5px;
 }
-
-
-/* Text Animation */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 
 .card {
     transition: transform 0.2s ease-in-out;
@@ -72,3 +93,56 @@ body {
     border-bottom-left-radius: 4px;
 }
 
+
+
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: row; /* Keep row layout */
+        gap: 20px;
+    }
+
+    .text-container {
+        max-width: 60%;
+    }
+
+    .image-container {
+        max-width: 40%;
+    }
+
+    .image-container img {
+        max-width: 200px; /* Reduce image size */
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+
+    #animated-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        flex-direction: row; /* Ensure row layout */
+        gap: 10px;
+    }
+
+    .text-container {
+        max-width: 65%;
+    }
+
+    .image-container {
+        max-width: 35%;
+    }
+
+    .image-container img {
+        max-width: 150px; /* Further reduce image size */
+    }
+}

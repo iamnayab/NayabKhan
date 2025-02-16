@@ -1,43 +1,57 @@
 .logo {
-    color: white;
-    font-size: 25px;
-    font-weight: bold;
-    font-family: 'Arial', sans-serif;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-    cursor: pointer;
-    transform: skew(-20deg);
-  }
-
-  .mat-toolbar {
-    background-color: #313131 !important;
-    color: white !important;
-  }
-  
-  .toolbar {
-    display: flex;
-    align-items: center;
-    padding: 0 16px;
-  }
-  
-  .spacer {
-    flex-grow: 1; /* Pushes the menu icon to the right */
-  }
-  
-  .sidenav-container {
-    height: 100vh;
-  }
-  
-  .content-container {
-    height: calc(100vh - 64px);
-    padding: 16px;
-  }
-  
-  mat-sidenav {
-    transition: width 0.3s ease-in-out !important;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  cursor: pointer;
+  transform: skew(-20deg);
 }
 
-  
+.mat-toolbar {
+  background-color: #313131 !important;
+  color: white !important;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.sidenav-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-container {
+  flex-grow: 1;
+  padding-bottom: 20px;
+}
+
+.footer {
+  width: 100%;
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+mat-sidenav {
+  transition: width 0.3s ease-in-out !important;
+}
