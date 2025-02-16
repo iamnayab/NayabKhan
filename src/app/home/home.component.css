@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #1e1e2f, #28293d);
+    background: linear-gradient(135deg, #1e1e2f, #191970);
     color: white;
     padding: 20px;
 }
@@ -20,14 +20,14 @@
     flex: 1;
 }
 
-.heading {
+.nayab {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 #animated-text {
-    font-size: 1.2rem;
+    font-size: 16px;
     font-style: italic;
     opacity: 0;
     animation: fadeIn 2s ease-in-out forwards;
@@ -52,15 +52,14 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-
-
-
-.btn {
-    background: white;
-    color: black;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
+.heading {
+    background: linear-gradient(90deg,#313131 5%, #191970);
+    color: white;
+    padding: 10px 20px; 
+    display: inline-block;
+    width: 70%;
+    clip-path: polygon(0% 0%, 85% 0%, 100% 100%, 0% 100%);
+    font-size: 18px;
 }
 
 .card {
@@ -71,6 +70,7 @@
     white-space: nowrap;
     min-width: 200px; 
     max-width: 100%;
+    font-size: 16px;
 }
 
 .card:hover {
@@ -81,24 +81,15 @@
 .chat-bubble {
     padding: 12px 16px;
     border-radius: 18px;
-    max-width: 80%;
+    max-width: 100%;
     font-size: 16px;
     line-height: 1.4;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .chat .chat-bubble {
-    background-color: #616161;
-    color: white;
     border-bottom-left-radius: 4px;
 }
-
-
-
-
-
-
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -119,30 +110,22 @@
         max-width: 200px; /* Reduce image size */
     }
 
-    .heading {
-        font-size: 2rem;
+    .nayab {
+        font-size: 1.8rem;
     }
 
     #animated-text {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-content {
-        flex-direction: row; /* Ensure row layout */
-        gap: 10px;
+        font-size: 14px;
     }
 
-    .text-container {
-        max-width: 65%;
+    .heading {
+        padding: 5px 10px;
+        font-size: 16px;
     }
-
-    .image-container {
-        max-width: 35%;
+    .chat-bubble{
+        max-width: 80%;
     }
-
-    .image-container img {
-        max-width: 150px; /* Further reduce image size */
+    .card{
+        font-size: 14px;
     }
 }
